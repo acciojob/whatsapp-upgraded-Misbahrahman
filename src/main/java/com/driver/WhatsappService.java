@@ -60,8 +60,8 @@ public class WhatsappService {
 
     public int createMessage(String content) {
         int id = msgId++;
-        Date date = new Date();
-        messageHashMap.put(id , new Message(id , content , date));
+//        Date date = new Date();
+        messageHashMap.put(id , new Message(id , content));
         return id;
     }
 

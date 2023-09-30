@@ -1,5 +1,7 @@
 package com.driver;
 
+import org.springframework.data.annotation.CreatedDate;
+
 import java.util.Date;
 
 public class Message {
@@ -31,13 +33,14 @@ public class Message {
 
     }
 
-    public Message(int id, String content, Date timestamp) {
+    public Message(int id, String content) {
         this.id = id;
         this.content = content;
-        this.timestamp = timestamp;
     }
 
     private int id;
     private String content;
+
+    @CreatedDate
     private Date timestamp;
 }
